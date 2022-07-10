@@ -30,7 +30,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
-          source: "src,target"
+          source: "src,deploy"
           target: "~/deploy/${{ github.repository }}/${{ github.run_number }}"
 
       - name: run remote shells
