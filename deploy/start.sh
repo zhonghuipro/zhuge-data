@@ -23,9 +23,16 @@ echo "run app"
 
 cd "${DIST_DIR}" || exit
 
+echo "clean .venv"
 rm -rf .venv
+
+echo "setup .venv"
 python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/
+
+echo "install requirements"
+.venv/bin/pip install -i http://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
+
+echo "start app"
 .venv/bin/python start.py ${APP_PORT}
 
 echo "done"
