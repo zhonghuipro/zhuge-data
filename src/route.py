@@ -8,7 +8,7 @@ def root_request():
     return "hello, world"
 
 
-@app.route('/call/ai/records')
+@app.route('/call/ai/records', methods=['POST'])
 def ai_records():
     return {
         "code": 0,
