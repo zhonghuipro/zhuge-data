@@ -1,3 +1,5 @@
+import sys
+
 from flask import Flask
 
 app = Flask(__name__)
@@ -9,4 +11,8 @@ def root_request():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=2022)
+    print(f"Arguments count: {len(sys.argv)}")
+    port = 2022
+    if len(sys.argv) > 1:
+        port = int(sys.argv[1])
+    app.run(host='0.0.0.0', port=port)
