@@ -30,7 +30,7 @@ echo "setup .venv"
 python3 -m venv .venv
 
 echo "install requirements"
-.venv/bin/pip install -i http://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
+.venv/bin/pip install -i https://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
 
 echo "start app"
 .venv/bin/python start.py ${APP_PORT}
