@@ -1,7 +1,9 @@
 from flask import Flask, request
 
-app = Flask(__name__)
+import logging
+logging.basicConfig(level=logging.INFO)
 
+app = Flask(__name__)
 
 @app.route('/')
 def root_request():
