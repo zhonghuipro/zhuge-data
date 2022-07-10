@@ -9,7 +9,7 @@ def root_request():
 
 
 @app.route('/call/ai/msg/<action>', methods=['POST'])
-def robot_msg(action):
+def call_msg(action):
     app.logger.info(action)
     app.logger.info(request.data)
     assert action in ['robot', 'voice', 'call', 'duration']
