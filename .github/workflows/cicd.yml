@@ -48,9 +48,7 @@ jobs:
           msg_type: text
           content: |
             text: |
-              发布完成
-              from github action
-              repository: ${{ github.repository }}
+              ${{ github.repository }} 发布完成 by github
               committer: ${{ github.actor }}
               compare: ${{ github.event.compare }}
               job status: ${{ job.status }}
